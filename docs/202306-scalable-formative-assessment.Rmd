@@ -1,5 +1,5 @@
 ---
-title: "Foundations for scalable NLP-assisted formative assessment feedback"
+title: "Progress toward NLP-assisted formative assessment feedback"
 author: |
   | Matthew Beckman
   | Penn State University
@@ -32,9 +32,11 @@ library(tidyverse)
 ![(QR Code) https://forms.gle/hpW72fMYE1SsB19JA](QR-GForm.png){width=20%}
 
 
+<!-- Discuss Michael Bulmer influence while folks complete this -->
+
 # Responses to our survey?
 
-1. Is your lucky number odd or even?
+1. Is your lucky/favorite number odd or even?
 2. How did you describe the value of formative assessment?
     - [Odd] Free text response: *write anything you like*
     - [Even] Selected response: *endorse provided options*
@@ -49,6 +51,13 @@ library(tidyverse)
 - A majority of U.S. undergraduates at public institutions will take at least one large enrollment STEM course (Supiano, 2022)
 - *Logistics* of constructed response tasks jeopardize use in large-enrollment classes (Garfield & Ben-Zvi, 2008; Woodard & McGowan, 2012)
 
+# Easy!
+
+![](small-class.jpg){ width=95% }
+
+# Erm... 
+
+![](large-class.jpg){ width=95% }
 
 # Goal state
 
@@ -251,6 +260,9 @@ Experiment with NLP representations
 - Reviewer 2 provided same, plus a quote from the student 
 - Reviewer 2 parsed her feedback to compare her remarks related to the statistical concepts (only) with the feedback of Reviewer 1.
 
+# Results (RQ3 humans)
+
+![Verbatim feedback most frequently provided by each reviewer for responses to task 2B.](verbatim-feedback.png){ width=95% }
 
 # Results (RQ3 machines)
 
@@ -314,7 +326,11 @@ Field test expansion:
     - addresses barriers imposed by proprietary data sources on NLP research
 
 
+# 
 
+AI tools are powerful, but unclear where they're heading without human partnership.  While our results are still quite preliminary, we think human-in-the-loop is a promising avenue toward scalable short-answer formative assessment.
+
+![image created with assistance of DALL·E 2 by Open AI prompted to illustrate a roadmap for the future of educational research](DALLE roadmap.png){ width=95% }
 
 # References (1/3)
 
