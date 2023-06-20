@@ -276,7 +276,6 @@ Experiment with NLP representations
 [^4]: Consistency is measured as the ratio of all pairs of responses in a given class per question that are clustered the same way on two runs (in the same cluster, or not in the same cluster).
 
 
-
 # Discussion
 
 - **RQ1**: Substantial agreement achieved among trained human raters provides context for further comparisons
@@ -284,6 +283,21 @@ Experiment with NLP representations
 - **RQ2**: NLP algorithm produced agreement reasonably aligned to results achieved by pairs/groups of trained human raters
 
 - **RQ3**: Classification and clustering have competing incentives for dimensionality; Lower D is better for cluster stability, Higher D better for classification reliability. (SFRN clustering was respectable despite high D, though)
+
+
+# Current Events: HIL deferral policy
+
+| Threshold     | Deferral Rate  |  Simulated HIL Accuracy | 
+|:-------------:|:--------------:|:------------------:|
+| 0.68          |  0.095         | 0.855            |
+| 0.75          |  0.132         | 0.861            |
+| 0.80          |  0.160         | 0.871            |
+| 0.85          |  0.202         | 0.884            |
+| **0.90**      |  **0.256**     | **0.899**        |
+| 0.95          |  0.418         | 0.931            |
+
+
+<!-- ![](HIL-deferral.png) -->
 
 
 # Limitations
