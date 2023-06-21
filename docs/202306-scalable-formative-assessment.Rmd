@@ -46,9 +46,9 @@ library(tidyverse)
 
 - "Write-to-learn" tasks improve learning outcomes (Graham, et al., 2020)
 - Critical for citizen-statisticians to communicate statistical ideas effectively (Gould, 2010)
-- Continual practice with communicating improves statistical literacy and promotes retention (Basu, et al., 2013)
+- Frequent practice w/ communicating improves statistical literacy and promotes retention (Basu, et al., 2013)
 - Formative assessment benefits both students & instructors (Black & Wiliam, 2009; GAISE, 2016; Pearl, et al., 2012)
-- A majority of U.S. undergraduates at public institutions will take at least one large enrollment STEM course (Supiano, 2022)
+- A majority of U.S. undergraduates at public institutions take at least one large-enrollment STEM course (Supiano, 2022)
 - *Logistics* of constructed response tasks jeopardize use in large-enrollment classes (Garfield & Ben-Zvi, 2008; Woodard & McGowan, 2012)
 
 # Easy!
@@ -85,7 +85,8 @@ library(tidyverse)
     - automated short-answer grading (ASAG) from 2009
     - essays & long-answer tasks earlier
 - Human-machine collaboration is a promising mechanism to assist rapid, individualized feedback at scale (Basu, 2013)
-- We use Semantic Feature-Wise Transformation Relation Network (SFRN; Li, Tomar, & Passonneau, 2021)
+- Deep neural networks application since 2016
+- Semantic Feature-Wise Transformation Relation Network (SFRN; Li, Tomar, & Passonneau, 2021)
     - back-translation data augmentation (French & Chinese)
     - can accommodate rubrics, expert solutions, or both
 
@@ -118,14 +119,32 @@ set of relation vectors is combined (+) using *SFT*. The $f_{\phi}MLP$ function 
 <!-- Note: How good does the machine have to be?? -->
 <!-- Note: as a statistician, I'm always comparing current circumstances of my data to some ideal state (SRS or randomized experiment) and negotiating compromise to achieve most desirable outcomes possible given the circumstances available. It's the same here--we want to create useful FA where there is (almost) none-->
 
+# Research Questions
+
+>- **RQ3**: What sort of NLP representation leads to good clustering performance, and how does that interact with the classification algorithm?  
+
+>- **RQ2**: What level of agreement is achieved between human raters and an NLP algorithm?  
+
+>- **RQ1**: What level of agreement is achieved among trained human raters labeling (i.e., scoring) short-answer tasks?  
+
+
+\vskip 18pt
+
+### Short Paper (ICOTS)
+
+\footnotesize
+
+Lloyd, S. E., Beckman, M., Pearl, D., Passonneau, R., Li, Z., & Wang, Z. (2022). Foundations for AI-Assisted Formative Assessment Feedback for Short-Answer Tasks in Large-Enrollment Classes. In *Proceedings of the eleventh international conference on teaching statistics*. Rosario, Argentina.
+
+
 
 # Research Questions
 
-- **RQ1**: What level of agreement is achieved among trained human raters labeling (i.e., scoring) short-answer tasks?
+- **RQ1**: What level of agreement is achieved among trained human raters labeling (i.e., scoring) short-answer tasks?  
 
-- **RQ2**: What level of agreement is achieved between human raters and an NLP algorithm?
+- **RQ2**: What level of agreement is achieved between human raters and an NLP algorithm?  
 
-- **RQ3**: What sort of NLP representation leads to good clustering performance, and how does that interact with the classification algorithm?
+- **RQ3**: What sort of NLP representation leads to good clustering performance, and how does that interact with the classification algorithm?  
 
 
 \vskip 18pt
@@ -162,7 +181,7 @@ Study utilized de-identified extant data & scoring rubrics (Beckman, 2015)
 
 Note: this sample is *not* a single large class at some institution; the available data includes introductory statistics students from many class sections at many institutions--some classes were quite small.  
 
-![image created with assistance of DALL·E 2 by Open AI](DALLE exam.png){width=30%}
+![image created with assistance of DALL·E 2 by Open AI](DALLE exam.png){ width=25% }
 
 # Methods (Short-answer task)
 
@@ -174,7 +193,7 @@ Note: this sample is *not* a single large class at some institution; the availab
 - 3 human raters typical of large-enrollment instruction team
 - entire sample (1,935 students) distributed among the team with sufficient intersection to assess rater agreement
 - 63 student responses in common for each *combination* of raters to quantify agreement (e.g., pairwise, consensus, etc)
-- constraint: sufficient data for *intra-rater* analysis for person that had labeled 178 responses 6 years prior
+- constraint: sufficient data for *intra-rater* analysis for person that had labeled 178 responses 6-7 years prior
 
 
 
@@ -203,11 +222,11 @@ Reliability interpretation[^1]: 0.6 < substantial < 0.8 < near perfect < 1.0
 
 The set of task-responses were randomly split four ways:  
 
-- 90% of data for development purposes, were partitioned according to machine-learning best practice:
+- 90% of data for development purposes (train), were partitioned 8:1:1
     - training (72%), 
     - development (9%)
     - evaluation (9%)
-- 10% of data being held in reserve for more rigorous testing
+- 10% of data being held in reserve (test)
 
 \vskip 14pt
 
@@ -291,6 +310,8 @@ Experiment with NLP representations
 
 # Current Events: HIL deferral policy
 
+> Our work is first (that we know of) to impelement controllable, selective prediction deferral policy
+
 | Threshold     | Deferral Rate  |  Simulated HIL Accuracy | 
 |:-------------:|:--------------:|:------------------:|
 | 0.68          |  0.095         | 0.855            |
@@ -303,6 +324,24 @@ Experiment with NLP representations
 
 <!-- ![](HIL-deferral.png) -->
 
+# Current Events: Improving on SFRN
+
+- Studying improvements on SFRN 
+- Answer-state Recurrent Relational Network (AsRRN)
+    - Breaks from reliance on linear architecture of SFRN
+    - Allows flexibility to accommodate shared stem with multiple prompts
+    - Better incorporates reference answers corresponding to rubric guidance
+- Contrastive Loss Function
+    - Correct answers are generally alike
+    - Many PC results align with a few common archetypes
+    - Diverse ways to be incorrect
+
+# Breaking News
+
+![New report on AI and the future of teaching and learning from US Dept of Education, Office of Educational Technology (May 2023)[^6] ](US-DOE-AI4Ed.png)
+
+
+[^6]: U.S. Department of Education, Office of Educational Technology (2023). *Artificial Intelligence and Future of Teaching and Learning: Insights and Recommendations.* Washington, DC.
 
 # Limitations
 
@@ -314,12 +353,11 @@ Experiment with NLP representations
     - clustering is necessary, but not sufficient, for meaningful feedback
     - semantic meaning of NLP clusters not yet rigorously studied
 
-# Future Work[^5]
+# Future Work
 
 Software development goals: 
 
 - challenge labeling algorithm with linguistic diversity;
-- human-in-the-loop policy to optimize when algorithm defers to human input;
 - iterative instructor input to group conceptual representations
 - Curse of dimensionality
     - distance between elements to be clustered increases monotonically with dimensionality (Bellman, 2003)
@@ -333,7 +371,6 @@ Field test expansion:
     - 2 of 5 institutions are HSI's
 - diversify item and rubric input to challenge performance
 
-[^5]: Adapted from research aims of Project CLASSIFIES (NSF DUE-2236150)
 
 
 # Additional Implications
@@ -343,12 +380,18 @@ Field test expansion:
     - this data set would be among the largest open data sources of it's kind
     - addresses barriers imposed by proprietary data sources on NLP research
 
-
 # 
 
 AI tools are powerful, but unclear where they're heading without human partnership.  While our results are still quite preliminary, we think human-in-the-loop is a promising avenue toward scalable short-answer formative assessment.
 
 ![image created with assistance of DALL·E 2 by Open AI prompted to illustrate a roadmap for the future of educational research](DALLE roadmap.png){ width=95% }
+
+# Acknowledgment
+
+- We're grateful to the US National Science Foundation for funding this research
+- Project CLASSIFIES (NSF DUE-2236150)
+
+
 
 # References (1/3)
 
@@ -409,13 +452,19 @@ Resource Page URL: <https://mdbeckman.github.io/QUT2023/>
 
 ![](GooglePhotos.jpeg)
 
+
+# Google Photos "Deferral"
+
+![](GooglePhotoDeferral.jpeg)
+
 Our approach to HIL would likely not make a recommendation to the human, just basically request help.
 
 
+# Recommendations from US Dept of Educaiton[^6]
 
-# Implications for Teaching & Research
+![](US-DOE-recommendations.png)
 
-![DALLE 2 image given the prompt: "Roadmap for future educational research in the style of a retro travel poster"](DALLE roadmap.png){width=40%}
+
 
 # Venn Diagram Fail
 
