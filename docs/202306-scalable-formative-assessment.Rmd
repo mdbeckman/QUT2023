@@ -335,12 +335,6 @@ Experiment with NLP representations
     - Many PC results align with a few common archetypes
     - Diverse ways to be incorrect
 
-# Breaking News
-
-![New report on AI and the future of teaching and learning from US Dept of Education, Office of Educational Technology (May 2023)[^6] ](US-DOE-AI4Ed.png)
-
-
-[^6]: U.S. Department of Education, Office of Educational Technology (2023). *Artificial Intelligence and Future of Teaching and Learning: Insights and Recommendations.* Washington, DC.
 
 # Limitations
 
@@ -378,6 +372,22 @@ Field test expansion:
 - accumulated data made available to broader NLP community
     - this data set would be among the largest open data sources of it's kind
     - addresses barriers imposed by proprietary data sources on NLP research
+
+
+# Breaking News
+
+![New report on AI and the future of teaching and learning from US Dept of Education, Office of Educational Technology (May 2023)[^6] ](US-DOE-AI4Ed.png)
+
+
+[^6]: U.S. Department of Education, Office of Educational Technology (2023). *Artificial Intelligence and Future of Teaching and Learning: Insights and Recommendations.* Washington, DC.
+
+
+
+# Recommendations from US Dept of Educaiton[^6]
+
+![](US-DOE-recommendations.png){ width=95% }
+
+
 
 # 
 
@@ -457,11 +467,6 @@ Resource Page URL: <https://mdbeckman.github.io/QUT2023/>
 ![](GooglePhotoDeferral.jpeg)
 
 Our approach to HIL would likely not make a recommendation to the human, just basically request help.
-
-
-# Recommendations from US Dept of Educaiton[^6]
-
-![](US-DOE-recommendations.png)
 
 
 
