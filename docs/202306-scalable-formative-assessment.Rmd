@@ -45,7 +45,7 @@ library(tidyverse)
 # Motivation
 
 - "Write-to-learn" tasks improve learning outcomes (Graham, et al., 2020)
-- Critical for citizen-statisticians to communicate statistical ideas effectively (Gould, 2010)
+- Critical for citizen-statisticians to communicate effectively (Gould, 2010)
 - Frequent practice w/ communicating improves statistical literacy and promotes retention (Basu, et al., 2013)
 - Formative assessment benefits both students & instructors (Black & Wiliam, 2009; GAISE, 2016; Pearl, et al., 2012)
 - A majority of U.S. undergraduates at public institutions take at least one large-enrollment STEM course (Supiano, 2022)
