@@ -326,7 +326,6 @@ Experiment with NLP representations
 
 # Current Events: Improving on SFRN
 
-- Studying improvements on SFRN 
 - Answer-state Recurrent Relational Network (AsRRN)
     - Breaks from reliance on linear architecture of SFRN
     - Allows flexibility to accommodate shared stem with multiple prompts
@@ -384,7 +383,7 @@ Field test expansion:
 
 AI tools are powerful, but unclear where they're heading without human partnership.  While our results are still quite preliminary, we think human-in-the-loop is a promising avenue toward scalable short-answer formative assessment.
 
-![image created with assistance of DALL·E 2 by Open AI prompted to illustrate a roadmap for the future of educational research](DALLE roadmap.png){ width=95% }
+![image created with assistance of DALL·E 2 by Open AI prompted to illustrate a roadmap for the future of educational research](DALLE roadmap.png){ width=55% }
 
 # Acknowledgment
 
